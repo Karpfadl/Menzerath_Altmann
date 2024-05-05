@@ -13,7 +13,8 @@ class EnglishHandler(LangInterface):
         return text_.split(" ")
 
     def count_syllables(self, word_):
-        if (length := len(self.dictionary[word_.lower()])) > 0:
+        lengths = [len(list(y for y in x if y[-1].isdigit())) for x in self.dictionary[word_.lower()]]
+        if lengths and (length := lengths[0]) > 0:
             return length
         else:
             return 2  # TODO find cleaner way to calculate

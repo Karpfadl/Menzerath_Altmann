@@ -1,5 +1,7 @@
-from main.lang_specific.russian.russian import word_split, count_syllables
+from main.lang_specific.english.english import EnglishHandler
+from main.lang_specific.russian.russian import RussianHandler
 
 lang_register = dict(
-    russian=(word_split, count_syllables)
+    russian=RussianHandler,
+    english=EnglishHandler
 )

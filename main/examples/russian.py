@@ -4,8 +4,8 @@ from main.constructs import TextProcessing
 from main.constructs.Processor import Processor
 from main.workflow.MACalculator import calculate_ma
 
-path = "D:/AB_paper/ViM_ges.txt"
-lang = "russian"
+path = "C:/Program Files/PuTTY/README.txt"
+lang = "english"
 
 text = TextProcessing.get_text(path)
 
